@@ -1,0 +1,26 @@
+.jumbotron {
+  text-align: center;
+  background: none;
+}
+body {
+  background-image: url(https://images.unsplash.com/photo-1560461311-0535e8fa1ba5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+#wrapper {
+  width: 1040px;
+  margin: 0 auto;
+}
+
+.googleContainer {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.row {
+  display: block;
+  margin-left: auto;
+  margin: auto;
+}
