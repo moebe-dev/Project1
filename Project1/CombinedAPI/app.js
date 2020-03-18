@@ -113,18 +113,28 @@ function getHiking(latitude, longitude) {
           const difficulty = response.trails[i].difficulty;
           const stars = response.trails[i].stars;
           const imgurl = response.trails[i].imgMedium;
+          const phurl = "this.src ='https://www.gotoglamourgirl.com/wp-content/uploads/2017/03/green-yard-cover.jpg';"
 
         // constants for new elements
-          const traildiv = $("<div class=trails>");
-          const trailnamep = $("<p>").text("Trail Name: " + trailname);
+          const trailcard = $("<div class=card>");
+          const cardbody = $("<div class=body>");
+          const trailnamep = $("<h5>").text("Trail Name: " + trailname);
+          trailnamep.attr("class", "card-title"); 
+          const difficultyp = $("<h6>").text("Difficulty: " + difficulty);
+          difficultyp.attr("class", "card-title");
+          const starsp = $("<h6>").text("Rating: " + stars);
+          starsp.attr("class", "card-title");
           const summaryp = $("<p>").text("Summary: " + summary);
-          const difficultyp = $("<p>").text("Difficulty: " + difficulty);
-          const starsp = $("<p>").text("Rating: " + stars);
-          const imgurlp = $("<img>").attr("src", imgurl);
+          summaryp.attr("class", "card-text");
+          const imgp = $("<img>");
+          imgp.attr("src", imgurl);
+          imgp.attr("onerror", phurl);
+          imgp.attr("height", "340px");
+          imgp.attr("width", "340px");
 
         //append to LyyteDiv
-          traildiv.append(trailnamep, trailnamep, summaryp, difficultyp, starsp, imgurlp);
-          $("#Lyyte").append(traildiv);
+          trailcard.append(trailnamep, trailnamep, summaryp, difficultyp, starsp, imgp);
+          $("#Lyyte").append(trailcard);
           }
 
 });
