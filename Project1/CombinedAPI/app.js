@@ -7,15 +7,16 @@ const notificationElement = document.querySelector(".notification");
 
 // App data
 const weather = {};
-
 weather.temperature = {
     unit: "celsius"
 }
 
 // APP CONSTS AND VARS
 const KELVIN = 273;
+
 // API KEY
 const key = "3a1348383a7ad0855242e55cee3a7f23";
+const key2 = "200705616-691135a1c37048aca9594476cc41aee8";
 
 // GEOLOCATION
 if ('geolocation' in navigator) {
@@ -31,6 +32,7 @@ function setPosition(position) {
     let longitude = position.coords.longitude;
 
     getWeather(latitude, longitude);
+    getHiking(latitude, longitude);
 }
 
 // SHOW ERROR WHEN THERE IS AN ISSUE WITH GEOLOCATION SERVICE
@@ -49,6 +51,7 @@ function getWeather(latitude, longitude) {
             return data;
         })
         .then(function (data) {
+            console.log("checkpoint mo")
             weather.temperature.value = Math.floor(data.main.temp - KELVIN);
             weather.description = data.weather[0].description;
             weather.iconId = data.weather[0].icon;
@@ -88,3 +91,41 @@ tempElement.addEventListener("click", function () {
         weather.temperature.unit = "celsius"
     }
 });
+
+// function to push top 6 trails from user location
+function getHiking(latitude, longitude) {
+    let api2 = `https://www.hikingproject.com/data/get-trails?lat=${latitude}&lon=${longitude}&maxDistance=10&key=${key2}`;
+    
+    $.ajax({
+        url: api2,
+        method: "GET"
+      })
+        .then(function(response) {
+          console.log(response);
+          console.log("checkpoint Lyyte!!!");
+
+          // constants for response data
+        for (i = 0; i < 6; i++) {
+
+        // constants for response data
+          const trailname = response.trails[i].name;
+          const summary = response.trails[i].summary;
+          const difficulty = response.trails[i].difficulty;
+          const stars = response.trails[i].stars;
+          const imgurl = response.trails[i].imgMedium;
+
+        // constants for new elements
+          const traildiv = $("<div class=trails>");
+          const trailnamep = $("<p>").text("Trail Name: " + trailname);
+          const summaryp = $("<p>").text("Summary: " + summary);
+          const difficultyp = $("<p>").text("Difficulty: " + difficulty);
+          const starsp = $("<p>").text("Rating: " + stars);
+          const imgurlp = $("<img>").attr("src", imgurl);
+
+        //append to LyyteDiv
+          traildiv.append(trailnamep, trailnamep, summaryp, difficultyp, starsp, imgurlp);
+          $("#Lyyte").append(traildiv);
+          }
+
+});
+};
