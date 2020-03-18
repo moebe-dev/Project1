@@ -32,6 +32,38 @@ function getWeather(latitude, longitude) {
       })
         .then(function(response) {
           console.log(response);
-          console.log("checkpoint!!!")
+          console.log("checkpoint!!!");
+
+          // constants for response data
+          
+
+          // constants for new elements
+
+          //append new divs to div id Lyyte
+        //   traildiv.append(trailnamep, trailnamep, summaryp, difficultyp, starsp, imgurlp);
+        //   $("#Lyyte").append(traildiv);
+
+          for (i = 0; i < 5; i++) {
+
+        // constants for response data
+          const trailname = response.trails[i].name;
+          const summary = response.trails[i].summary;
+          const difficulty = response.trails[i].difficulty;
+          const stars = response.trails[i].stars;
+          const imgurl = response.trails[i].imgMedium;
+
+        //
+          const traildiv = $("<div class=trails>");
+          const trailnamep = $("<p>").text("Trail Name: " + trailname);
+          const summaryp = $("<p>").text("Summary: " + summary);
+          const difficultyp = $("<p>").text("Difficulty: " + difficulty);
+          const starsp = $("<p>").text("Rating: " + stars);
+          const imgurlp = $("<img>").attr("src", imgurl);
+
+
+            traildiv.append(trailnamep, trailnamep, summaryp, difficultyp, starsp, imgurlp);
+          $("#Lyyte").append(traildiv);
+          }
+
 });
 };
