@@ -117,7 +117,7 @@ function getHiking(latitude, longitude) {
 
         // constants for new elements
           const trailcard = $("<div class=card>");
-          const cardbody = $("<div class=body>");
+          trailcard.attr("style", "width: 21rem;")
           const trailnamep = $("<h5>").text("Trail Name: " + trailname);
           trailnamep.attr("class", "card-title"); 
           const difficultyp = $("<h6>").text("Difficulty: " + difficulty);
