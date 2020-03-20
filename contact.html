@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <audio src="assets/sounds/birds.mp3" autoplay></audio>
+    <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+
+<body>
+    <div class="contact-title">
+        <h1>Say Hello</h1>
+        <h2>please tell us how we can improve your experience here at trailbook.</h2>
+    </div>
+    <div class="contact-form">
+        <form id="contact-form" method="POST" action="contact-form-handler.php">
+            <input name="name" type="text" class="form-control" placeholder="Name" required><br>
+            <input name="email" type="email" class="form-control" placeholder="Email" required><br>
+            <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
+            <input type="submit" class="form-control submit" value="SEND MESSAGE">
+        </form>
+    </div>
+</body>
+
+</html>

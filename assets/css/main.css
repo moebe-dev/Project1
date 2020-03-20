@@ -1,0 +1,138 @@
+body {
+    background-image: url('http://bit.ly/2TZdoYq'); 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Spartan', sans-serif;
+}
+.wrapper {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.jumbotron {
+    background: none;
+    text-align: center;
+}
+h1 {
+    font-size: 8rem;
+    font-family: 'Pacifico', cursive;
+    color: #4c8055;
+    text-shadow:
+        -1px -1px 0 #fbf1e3,  
+        2px -1px 0 #fbf1e3,
+        -1px 1px 0 #fbf1e3,
+        2px 2px 0 #fbf1e3;
+}
+.card {
+   
+    size: 40rem;
+    border-radius: 10px;
+    border: 3px solid #fbf1e3; 
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0 ;
+}
+
+.card-body {
+    margin: 0 auto;
+    padding:10px;
+}
+.row {
+    margin: 0 auto;
+}
+/* thermometer */
+* { 
+    box-sizing: initial;
+}
+.container {
+    width: 200px;
+    height: 305px;
+    margin: 0 auto;
+    background-color: rgba(211, 247, 219, 0.5);
+    background-blend-mode: lighten;
+    border: 3px solid white;
+    border-radius: 10px;
+    padding-bottom: 50px;
+}
+.container-sm {
+
+}
+
+.app-title {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+.app-title p {
+    
+    padding: 15px;
+    font-size: 1.6em;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+.notification {
+    background-color: seashell;
+    display: none;
+}
+
+.notification p {
+    color: maroon;
+    font-size: 1.2em;
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.weather-container {
+    width: 200px;
+    height: 200px;
+}
+
+.weather-icon {
+    width: 200px;
+    height: 128px;
+}
+
+.weather-icon img {
+    display: block;
+    margin: 0 auto;
+}
+
+.temperature-value {
+    width: 200px;
+    height: 60px;
+}
+
+.temperature-value p {
+    padding: 0;
+    margin: 0;
+    color: black;
+    font-size: 4em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.temperature-value span {
+    color: black;
+    font-size: 0.5em;
+}
+
+.temperature-description p {
+    padding: 2px;
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.location p {
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-align: center;
+    font-size: 0.8em;
+}
