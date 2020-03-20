@@ -117,7 +117,7 @@ function getHiking(latitude, longitude) {
 
         // constants for new elements
           const trailcard = $("<div class=card>");
-          trailcard.attr("style", "width: 21rem;")
+          trailcard.attr("class", "card col-12 col-sm-6 col-md-4 col-lg-2 col-xl-2")
           const trailnamep = $("<h5>").text("Trail Name: " + trailname);
           trailnamep.attr("class", "card-title"); 
           const difficultyp = $("<h6>").text("Difficulty: " + difficulty);
@@ -129,8 +129,8 @@ function getHiking(latitude, longitude) {
           const imgp = $("<img>");
           imgp.attr("src", imgurl);
           imgp.attr("onerror", phurl);
-          imgp.attr("height", "340px");
-          imgp.attr("width", "340px");
+          imgp.attr("class", "img-fluid");
+          // <a href="#" class="btn btn-primary">Go Here</a>
 
         //append to LyyteDiv
           trailcard.append(trailnamep, trailnamep, summaryp, difficultyp, starsp, imgp);

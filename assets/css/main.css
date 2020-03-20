@@ -6,7 +6,7 @@ body {
     font-family: 'Spartan', sans-serif;
 }
 .wrapper {
-    max-width: 60rem;
+    /* max-width: 60rem; */
     margin: 0 auto;
 }
 .jumbotron {
@@ -66,12 +66,10 @@ h1 {
 }
 
 .app-title p {
-    
     padding: 15px;
     font-size: 1.6em;
     color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
 }
 
 .notification {
