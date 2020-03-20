@@ -3,14 +3,13 @@ header{
   width: 100%;
 }
 body {
-  background-image: url("../../assets/images/backgroundMain.jpg"); 
+  background-image: url('../../assets/images/backgroundMain.jpg'); 
   background-attachment: fixed;
-  background-color: rgba(255, 255, 255, 0.5);
-  background-blend-mode: lighten;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Spartan', sans-serif;
-  text-shadow: 1px 1px  #fbf1e3;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  color: #fbf1e3;
 }
 
 
@@ -18,24 +17,53 @@ body {
   max-width: 60rem;
   margin: 0 auto;
 }
-
+.row {
+  background: rgba(42, 42, 42, 0.8);
+  background-position: center;
+  padding: 20px;
+  margin-top: 200px;
+  height: 60vh;
+  border:2px solid rgb(227, 126, 84);
+}
 button {
-  background-color: #4c8055;
+  background-color: rgb(227, 126, 84);
   border: 1.5px solid #fbf1e3;
   border-radius: 12px;
   display: block;
-  max-width: 300px;
+  width: 40%;
+  height: auto;
   margin: auto;
+  margin-top: -220px;
   padding: 10px 20px;
-  font-size: 18px;
-}
-button:hover {
-  border: 1px solid #4c8055;
+  font-size: 28px;
 }
 
+.important {
+  color:  rgb(227, 126, 84);
+}
+
+button:hover {
+  border: 1px solid rgb(227, 126, 84);;
+  text-decoration: none;
+}
+a {
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: #fbf1e3;
+}
+.responsive {
+  position: static;
+  margin-top: -150px;
+  width: 100%;
+  height: auto;
+}
 p {
+  margin-top: 40px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.25rem;
+
 }
 
 #statement {
@@ -44,5 +72,5 @@ p {
 }
 
 strong {
-  opacity: 0.7;
+  color:  rgb(227, 126, 84);
 }
