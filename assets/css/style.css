@@ -17,12 +17,15 @@ body {
   max-width: 60rem;
   margin: 0 auto;
 }
+.container {
+  background: rgba(42, 42, 42, 0.8);
+}
 .row {
   background: rgba(42, 42, 42, 0.8);
   background-position: center;
   padding: 20px;
-  margin-top: 200px;
-  height: 60vh;
+  margin-top: 250px;
+  height: 70vh;
   border:2px solid rgb(227, 126, 84);
 }
 button {
@@ -55,14 +58,14 @@ a:hover {
 }
 .responsive {
   position: static;
-  margin-top: -150px;
+  margin-top: -130px;
   width: 100%;
   height: auto;
 }
 p {
-  margin-top: 40px;
+  margin-top: 60px;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 
 }
 

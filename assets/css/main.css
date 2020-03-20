@@ -6,7 +6,7 @@ body {
     font-family: 'Spartan', sans-serif;
 }
 .wrapper {
-    max-width: 60rem;
+    /* max-width: 60rem; */
     margin: 0 auto;
 }
 .jumbotron {
@@ -24,7 +24,6 @@ h1 {
         2px 2px 0 #fbf1e3;
 }
 .card {
-   
     size: 40rem;
     border-radius: 10px;
     border: 3px solid #fbf1e3; 
@@ -55,9 +54,7 @@ h1 {
     border-radius: 10px;
     padding-bottom: 50px;
 }
-.container-sm {
 
-}
 
 .app-title {
     width: 200px;
@@ -66,12 +63,10 @@ h1 {
 }
 
 .app-title p {
-    
     padding: 15px;
     font-size: 1.6em;
     color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
 }
 
 .notification {

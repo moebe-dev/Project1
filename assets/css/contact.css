@@ -27,6 +27,7 @@ body {
 form {
     margin-top: 50px;
     transition: all 3s ease-in-out;
+    background: rgba(42, 42, 42, 0.8);
 }
 
 .form-control {
