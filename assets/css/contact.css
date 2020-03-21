@@ -7,7 +7,12 @@ body {
     background-repeat: no-repeat;
     font-family: sans-serif;
 }
-
+.container {
+    background: rgba(42, 42, 42, 0.8);
+    border: 2px solid  rgb(227, 126, 84);
+    margin: 300px;
+    padding: 25px 0 75px 0;
+}
 .contact-title {
     margin-top: 100px;
     color: wheat;
@@ -26,8 +31,6 @@ body {
 
 form {
     margin-top: 50px;
-    transition: all 3s ease-in-out;
-    background: rgba(42, 42, 42, 0.8);
 }
 
 .form-control {
@@ -35,7 +38,7 @@ form {
     background: transparent;
     border: none;
     outline: none;
-    border-bottom: 1px solid tomato;
+    border-bottom: 1px solid  rgb(227, 126, 84);
     color: white;
     font-size: 18px;
     margin-bottom: 16px;
@@ -46,7 +49,7 @@ input {
 }
 
 form .submit {
-    background: orangered;
+    background:  rgb(227, 126, 84);
     border-color: transparent;
     color: white;
     font-size: 20px;
@@ -56,10 +59,10 @@ form .submit {
 }
 
 form .submit:hover {
-    background-color: tomato;
+    background-color:  rgb(227, 126, 84);
     cursor: pointer;
 }
 
 placeholder {
-    color: red;
+    color: rgb(227, 126, 84);
 }

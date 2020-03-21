@@ -105,37 +105,38 @@ function getHiking(latitude, longitude) {
           console.log("checkpoint Lyyte!!!");
 
           // constants for response data
-        for (i = 0; i < 6; i++) {
+        for (i = 0; i < 8; i++) {
 
         // constants for response data
-          const trailname = response.trails[i].name;
-          const summary = response.trails[i].summary;
-          const difficulty = response.trails[i].difficulty;
-          const stars = response.trails[i].stars;
-          const imgurl = response.trails[i].imgMedium;
-          const phurl = "this.src ='https://www.gotoglamourgirl.com/wp-content/uploads/2017/03/green-yard-cover.jpg';"
-
+        const trailname = response.trails[i].name;
+        const summary = response.trails[i].summary;
+        const difficulty = response.trails[i].difficulty;
+        const stars = response.trails[i].stars;
+        const imgurl = response.trails[i].imgSmallMed;
+        const phurl = "this.src ='https://cdn.pixabay.com/photo/2018/01/05/23/50/wood-3064114_960_720.jpg';"
+        const turl = response.trails[i].url;
         // constants for new elements
-          const trailcard = $("<div class=card>");
-          trailcard.attr("class", "card col-12 col-sm-6 col-md-4 col-lg-2 col-xl-2")
-          const trailnamep = $("<h5>").text("Trail Name: " + trailname);
-          trailnamep.attr("class", "card-title"); 
-          const difficultyp = $("<h6>").text("Difficulty: " + difficulty);
-          difficultyp.attr("class", "card-title");
-          const starsp = $("<h6>").text("Rating: " + stars);
-          starsp.attr("class", "card-title");
-          const summaryp = $("<p>").text("Summary: " + summary);
-          summaryp.attr("class", "card-text");
-          const imgp = $("<img>");
-          imgp.attr("src", imgurl);
-          imgp.attr("onerror", phurl);
-          imgp.attr("class", "img-fluid");
-          // <a href="#" class="btn btn-primary">Go Here</a>
-
-        //append to LyyteDiv
-          trailcard.append(trailnamep, trailnamep, summaryp, difficultyp, starsp, imgp);
-          $("#Lyyte").append(trailcard);
-          }
-
+        const trailcard = $("<div class=card>");
+        trailcard.attr("class", "card col-9 col-sm-6 col-md-3 col-lg-2 col-xl-2")
+        const trailnamep = $("<h5>").text("Trail Name: " + trailname);
+        trailnamep.attr("class", "card-title");
+        const difficultyp = $("<h6>").text("Difficulty: " + difficulty);
+        difficultyp.attr("class", "card-title");
+        const starsp = $("<h6>").text("Rating: " + stars);
+        starsp.attr("class", "card-title");
+        const summaryp = $("<p>").text("Summary: " + summary);
+        summaryp.attr("class", "card-text");
+        const imgp = $("<img>");
+        imgp.attr("src", imgurl);
+        imgp.attr("onerror", phurl);
+        imgp.attr("class", "img-fluid");
+        const butp = $("<a>").text("More info");
+        butp.attr("class", "btn btn-primary")
+        butp.attr("href", turl)
+        butp.attr("target", "_blank")
+        trailcard.append(trailnamep, trailnamep, summaryp, difficultyp, starsp, imgp, butp)
+        $("#Lyyte").append(trailcard);
+    }
 });
 };
+
