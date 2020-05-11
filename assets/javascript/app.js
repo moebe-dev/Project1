@@ -5,7 +5,7 @@ const descElement = document.querySelector(".temperature-description p");
 const locationElement = document.querySelector(".location p");
 const notificationElement = document.querySelector(".notification");
 
-// App data
+// APP DATA
 const weather = {};
 weather.temperature = {
     unit: "celsius"
@@ -35,7 +35,7 @@ function setPosition(position) {
     getHiking(latitude, longitude);
 }
 
-// SHOW ERROR WHEN THERE IS AN ISSUE WITH GEOLOCATION SERVICE
+// SHOW ERROR - WHEN THERE IS AN ISSUE WITH GEOLOCATION SERVICE
 function showError(error) {
     notificationElement.style.display = "block";
     notificationElement.innerHTML = `<p> ${error.message} </p>`;
@@ -44,14 +44,13 @@ function showError(error) {
 // GET WEATHER FROM API PROVIDER
 function getWeather(latitude, longitude) {
     let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
-
+    
     fetch(api)
         .then(function (response) {
             let data = response.json();
             return data;
         })
         .then(function (data) {
-            console.log("checkpoint mo")
             weather.temperature.value = Math.floor(data.main.temp - KELVIN);
             weather.description = data.weather[0].description;
             weather.iconId = data.weather[0].icon;
@@ -92,51 +91,46 @@ tempElement.addEventListener("click", function () {
     }
 });
 
-// function to push top 6 trails from user location
+// FUNCTION TO PUSH TOP 6 TRAILS FROM USER LOCATION
 function getHiking(latitude, longitude) {
     let api2 = `https://www.hikingproject.com/data/get-trails?lat=${latitude}&lon=${longitude}&maxDistance=10&key=${key2}`;
-    
+
     $.ajax({
         url: api2,
         method: "GET"
-      })
-        .then(function(response) {
-          console.log(response);
-          console.log("checkpoint Lyyte!!!");
+    })
+        .then(function (response) {
+            for (i = 0; i < 8; i++) {
 
-          // constants for response data
-        for (i = 0; i < 8; i++) {
-
-        // constants for response data
-        const trailname = response.trails[i].name;
-        const summary = response.trails[i].summary;
-        const difficulty = response.trails[i].difficulty;
-        const stars = response.trails[i].stars;
-        const imgurl = response.trails[i].imgSmallMed;
-        const phurl = "this.src ='https://cdn.pixabay.com/photo/2018/01/05/23/50/wood-3064114_960_720.jpg';"
-        const turl = response.trails[i].url;
-        // constants for new elements
-        const trailcard = $("<div class=card>");
-        trailcard.attr("class", "card col-9 col-sm-6 col-md-3 col-lg-2 col-xl-2")
-        const trailnamep = $("<h5>").text("Trail Name: " + trailname);
-        trailnamep.attr("class", "card-title");
-        const difficultyp = $("<h6>").text("Difficulty: " + difficulty);
-        difficultyp.attr("class", "card-title");
-        const starsp = $("<h6>").text("Rating: " + stars);
-        starsp.attr("class", "card-title");
-        const summaryp = $("<p>").text("Summary: " + summary);
-        summaryp.attr("class", "card-text");
-        const imgp = $("<img>");
-        imgp.attr("src", imgurl);
-        imgp.attr("onerror", phurl);
-        imgp.attr("class", "img-fluid");
-        const butp = $("<a>").text("More info");
-        butp.attr("class", "btn btn-primary")
-        butp.attr("href", turl)
-        butp.attr("target", "_blank")
-        trailcard.append(trailnamep, trailnamep, summaryp, difficultyp, starsp, imgp, butp)
-        $("#Lyyte").append(trailcard);
-    }
-});
+                // CONSTANTS FOR RESPONSE DATA
+                const trailname = response.trails[i].name;
+                const summary = response.trails[i].summary;
+                const difficulty = response.trails[i].difficulty;
+                const stars = response.trails[i].stars;
+                const imgurl = response.trails[i].imgSmallMed;
+                const phurl = "this.src ='https://cdn.pixabay.com/photo/2018/01/05/23/50/wood-3064114_960_720.jpg';"
+                const turl = response.trails[i].url;
+                // CONSTANTS FOR RESPONSE DATA
+                const trailcard = $("<div class=card>");
+                trailcard.attr("class", "card col-9 col-sm-6 col-md-3 col-lg-2 col-xl-2")
+                const trailnamep = $("<h5>").text("Trail Name: " + trailname);
+                trailnamep.attr("class", "card-title");
+                const difficultyp = $("<h6>").text("Difficulty: " + difficulty);
+                difficultyp.attr("class", "card-title");
+                const starsp = $("<h6>").text("Rating: " + stars);
+                starsp.attr("class", "card-title");
+                const summaryp = $("<p>").text("Summary: " + summary);
+                summaryp.attr("class", "card-text");
+                const imgp = $("<img>");
+                imgp.attr("src", imgurl);
+                imgp.attr("onerror", phurl);
+                imgp.attr("class", "img-fluid");
+                const butp = $("<a>").text("More info");
+                butp.attr("class", "btn btn-primary")
+                butp.attr("href", turl)
+                butp.attr("target", "_blank")
+                trailcard.append(trailnamep, trailnamep, summaryp, difficultyp, starsp, imgp, butp)
+                $("#Lyyte").append(trailcard);
+            }
+        });
 };
-
