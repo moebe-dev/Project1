@@ -1,20 +1,23 @@
 body {
-    background-image: url('http://bit.ly/2TZdoYq'); 
+    background-image: url('http://bit.ly/2TZdoYq');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Spartan', sans-serif;
 }
+
 .wrapper {
-    width: 75%;
+    width: 80%;
     background: rgba(42, 42, 42, 0.8);
     background-position: center;
     padding: 20px;
     margin-top: 250px;
     min-height: 50vh;
-    border:2px solid rgb(227, 126, 84);
+    border: 2px solid rgb(227, 126, 84);
     margin: 0 auto;
+    padding-left: 14em;
 }
+
 header {
     width: 70%;
     margin-top: 150px;
@@ -32,16 +35,20 @@ header {
 }
 
 .btn:hover {
-    border: 1px solid rgb(227, 126, 84);;
+    border: 1px solid rgb(227, 126, 84);
+    ;
     text-decoration: none;
 }
+
 a {
     color: black;
 }
+
 a:hover {
     text-decoration: none;
     color: #fbf1e3;
 }
+
 .card {
     height: 500px;
     border-radius: 10px;
@@ -52,6 +59,7 @@ a:hover {
     line-height: 1;
     overflow-y: hidden;
 }
+
 .responsive {
     position: static;
     margin-top: -130px;
@@ -59,14 +67,16 @@ a:hover {
     max-width: 50%;
     height: auto;
 }
+
 h5 {
     margin-top: 10px;
-    
 }
+
 h6 {
     margin-top: 0;
     font-size: 0.8rem;
 }
+
 .card-img-top {
     width: 110%;
     height: 50%;
@@ -75,6 +85,7 @@ h6 {
     object-fit: fill;
     overflow: hidden;
 }
+
 .img-fluid {
     width: 100%;
     height: 200%;
@@ -86,22 +97,20 @@ h6 {
     margin: 0 auto;
 }
 
-#Lyyte.row {
-margin: 0 auto;
-width: 100%;
-}
 col {
     padding: 0;
 }
-/* thermometer */
+
 #Weather {
     margin-top: 100px;
     max-width: 45%;
     float: right;
 }
-* { 
+
+* {
     box-sizing: initial;
 }
+
 .container {
     height: 300px;
     margin: 0 auto;
@@ -109,11 +118,10 @@ col {
     padding: 20px;
     background-color: rgba(211, 247, 219, 0.5);
     background-blend-mode: lighten;
-    border:2px solid rgb(227, 126, 84);
+    border: 2px solid rgb(227, 126, 84);
     border-radius: 10px;
     padding-bottom: 50px;
 }
-
 
 .app-title {
     width: 200px;
@@ -182,6 +190,7 @@ col {
     color: white;
     text-align: center;
     font-size: 1.2em;
+    padding-top: 35px;
 }
 
 .location p {
@@ -189,19 +198,23 @@ col {
     padding: 10px;
     color: black;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 #compass {
     color: #fbf1e3;
-    font-size: 1.1rem;
-    margin: 75px;
+    font-size: 1.3rem;
+    margin: 50px;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-right: 200px;
 }
 
 .contactRow {
     padding: 50px;
+    margin-right: 200px;
 }
+
 button {
     background-color: rgb(227, 126, 84);
     border-radius: 10px;
@@ -217,6 +230,7 @@ button {
 }
 
 button:hover {
-    border: 1px solid rgb(227, 126, 84);;
+    border: 1px solid rgb(227, 126, 84);
+    ;
     text-decoration: none;
 }
